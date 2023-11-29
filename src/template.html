@@ -7,13 +7,13 @@
   </head>
   <body>
     <header>
-      <div class="background"></div>
+      <div id="bg"></div>
       <img
         src="./walking.png"
         alt="photo of a walking man"
-        class="walking-photo"
+        id="walking-photo"
       />
-      <section class="autor-description">
+      <section id="autor-description">
         <h1>About me</h1>
         <h2>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quam
@@ -23,21 +23,25 @@
           unde magni! Officiis officia maxime ipsum quasi nulla maiores eius,
           voluptate laborum!
         </h2>
-        <div class="socials" aria-label="author social medias">
+        <aside class="socials" aria-label="author social media">
           <a href="https://github.com/beMimg">
-            <img src="./github.svg" class="github-svg" alt="github icon link"
+            <img alt="github icon link" src="./github.svg" class="socials-img"
           /></a>
           <a href="https://google.com">
             <img
-              src="./linkedin.svg"
-              class="linkedin-svg"
               alt="linkedin icon link"
+              src="./linkedin.svg"
+              class="socials-img"
             />
           </a>
-        </div>
+        </aside>
       </section>
     </header>
-    <main></main>
+
+    <main>
+      <h1 id="my-work-title" aria-label="my works display">My Work</h1>
+      <div id="projects-container"></div>
+    </main>
     <footer></footer>
   </body>
 </html>
