@@ -112,6 +112,59 @@ main {
   font-size: 3rem;
   display: grid;
   align-self: center;
+  margin-left: 50px;
 }
 #projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 500px));
+  justify-content: center;
+  gap: 60px;
+  padding: 30px;
+  perspective: 800px;
+}
+.project-container {
+  display: grid;
+  grid-template-rows: 60% auto;
+  box-shadow: 2px 6px 10px;
+  transition: all 0.5s ease;
+}
+.project-container:hover {
+  transform: translateY(-10px);
+}
+.project-screenshot {
+  background-color: var(--mid-high-tone);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.project-screenshot p {
+  color: white;
+  font-size: 1.5rem;
+}
+.project-info {
+  display: grid;
+  grid-template-rows: 30% auto;
+}
+.project-info-top {
+  display: grid;
+  grid-template-columns: 70% auto;
+  align-items: center;
+}
+.project-socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.project-info-top img {
+  width: 35px;
+}
+
+.project-name {
+  font-weight: 600;
+  margin-left: 10%;
+}
+
+.project-description {
+  font-weight: 400;
+  margin-left: 7%;
 }
