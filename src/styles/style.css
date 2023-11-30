@@ -109,6 +109,8 @@ header {
 }
 /* HEADER */
 
+/* MAIN */
+
 #my-work-title {
   font-size: 3rem;
   display: grid;
@@ -133,7 +135,7 @@ header {
   transform: translateY(-10px);
 }
 .project-screenshot {
-  background-color: var(--mid-high-tone);
+  background-color: #429d89;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -214,7 +216,7 @@ footer {
   transform: translateY(-10px);
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   header {
     grid-template-columns: none;
   }
@@ -222,7 +224,7 @@ footer {
     width: 450px;
     height: auto;
     position: absolute;
-    left: 15%;
+    left: 10%;
     top: 7%;
     z-index: 2;
   }
@@ -248,10 +250,14 @@ footer {
     display: grid;
     justify-self: flex-end;
     align-self: center;
-    margin-bottom: 70px;
+    font-size: 2rem;
   }
   #autor-description h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 60px;
   }
+}
+
+@media only screen and (max-width: 767px) {
+  /* Your styles for mobile devices go here */
 }
