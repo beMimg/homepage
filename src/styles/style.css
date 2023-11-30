@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-rows: 100vh 100vh 50vh;
+  grid-template-rows: 100vh auto 500px;
   scroll-behavior: smooth;
   font-family: 'Open Sans', sans-serif;
 }
@@ -44,8 +44,8 @@ header {
   clip-path: polygon(0 0, 100% 0, 100% 46%, 0% 100%);
 }
 #walking-photo {
-  max-width: 80%;
-  height: auto;
+  max-width: 600px;
+  height: 600px;
   justify-self: flex-end;
   box-shadow: 2px 8px 12px;
   transition: transform 0.3s ease;
@@ -65,8 +65,12 @@ header {
   flex-direction: column;
   animation: slide-right 1.3s ease;
 }
+.spacer-display-none {
+  display: none;
+}
 #autor-description h1 {
   font-size: 4rem;
+  font-weight: 500;
 }
 #autor-description h2 {
   font-size: 1.2rem;
@@ -105,10 +109,6 @@ header {
 }
 /* HEADER */
 
-main {
-  display: grid;
-  grid-template-rows: 10% auto;
-}
 #my-work-title {
   font-size: 3rem;
   display: grid;
@@ -117,17 +117,17 @@ main {
 }
 #projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 500px));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
   justify-content: center;
   gap: 60px;
   padding: 60px;
-  perspective: 800px;
 }
 .project-container {
   display: grid;
   grid-template-rows: 60% auto;
   box-shadow: 2px 6px 10px;
   transition: all 0.5s ease;
+  min-height: 400px;
 }
 .project-container:hover {
   transform: translateY(-10px);
@@ -179,6 +179,7 @@ footer {
   color: white;
   padding: 60px;
   overflow: hidden;
+  gap: 60px;
 }
 .author-info img {
   width: 50px;
@@ -198,20 +199,59 @@ footer {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 .image-container {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-}
-.image-container img {
-  max-width: 50%;
-  height: auto;
+  background-image: url('../assets/keyboard.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 10px;
-  box-shadow: 2px 6px 9px black;
-  transition: all 0.5s ease;
-  object-fit: contain;
+  box-shadow: 2px 8px 10px black;
+  transition: all 0.3s ease-in-out;
 }
-.image-container img:hover {
+.image-container:hover {
   transform: translateY(-10px);
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  header {
+    grid-template-columns: none;
+  }
+  #walking-photo {
+    width: 450px;
+    height: auto;
+    position: absolute;
+    left: 15%;
+    top: 7%;
+    z-index: 2;
+  }
+  #autor-description {
+    position: absolute;
+    max-height: 450px;
+    left: 24%;
+    top: 24%;
+    max-width: 700px;
+    margin: 50px;
+    gap: 0;
+    display: block;
+  }
+  .socials {
+    display: none;
+  }
+  .empty-spacer {
+    width: 300px;
+    height: 250px;
+    float: left;
+  }
+  #autor-description h1 {
+    display: grid;
+    justify-self: flex-end;
+    align-self: center;
+    margin-bottom: 70px;
+  }
+  #autor-description h2 {
+    font-size: 1.4rem;
+    margin-bottom: 60px;
+  }
 }
